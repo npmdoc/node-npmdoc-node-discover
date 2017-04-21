@@ -1,0 +1,814 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="http://github.com/wankdanker/node-discover"
+
+    >node-discover (v0.6.2)</a>
+</h1>
+<h4>Automatically discover your nodejs instances with built-in support for automatic single master and capability advertising.</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-discover">module node-discover</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-discover.node-discover">
+            function <span class="apidocSignatureSpan"></span>node-discover
+            <span class="apidocSignatureSpan">(options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-discover.network">
+            function <span class="apidocSignatureSpan">node-discover.</span>network
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-discover.super_">
+            function <span class="apidocSignatureSpan">node-discover.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-discover.weight">
+            function <span class="apidocSignatureSpan">node-discover.</span>weight
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-discover.</span>network.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-discover.network">module node-discover.network</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-discover.network.network">
+            function <span class="apidocSignatureSpan">node-discover.</span>network
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-discover.network.super_">
+            function <span class="apidocSignatureSpan">node-discover.network.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-discover.network.prototype">module node-discover.network.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-discover.network.prototype.decode">
+            function <span class="apidocSignatureSpan">node-discover.network.prototype.</span>decode
+            <span class="apidocSignatureSpan">(data, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-discover.network.prototype.encode">
+            function <span class="apidocSignatureSpan">node-discover.network.prototype.</span>encode
+            <span class="apidocSignatureSpan">(data, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-discover.network.prototype.send">
+            function <span class="apidocSignatureSpan">node-discover.network.prototype.</span>send
+            <span class="apidocSignatureSpan">(event)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-discover.network.prototype.start">
+            function <span class="apidocSignatureSpan">node-discover.network.prototype.</span>start
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-discover.network.prototype.stop">
+            function <span class="apidocSignatureSpan">node-discover.network.prototype.</span>stop
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-discover" id="apidoc.module.node-discover">module node-discover</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-discover.node-discover" id="apidoc.element.node-discover.node-discover">
+        function <span class="apidocSignatureSpan"></span>node-discover
+        <span class="apidocSignatureSpan">(options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Discover(options, callback) {
+	if (!(this instanceof Discover)) {
+		return new Discover(options, callback);
+	}
+
+	EventEmitter.call(this);
+
+	if (typeof options === &#x27;function&#x27;) {
+		callback = options;
+		options = null;
+	}
+
+	var self = this, checkId, helloId, running = false, options = options || {}
+
+	var settings = self.settings = {
+		helloInterval	: options.helloInterval		|| 1000,
+		checkInterval	: options.checkInterval		|| 2000,
+		nodeTimeout		: options.nodeTimeout		|| 2000,
+		masterTimeout	: options.masterTimeout		|| 2000,
+		address			: options.address			|| &#x27;0.0.0.0&#x27;,
+		port			: options.port				|| 12345,
+		broadcast		: options.broadcast 		|| null,
+		multicast		: options.multicast 		|| null,
+		multicastTTL 	: options.multicastTTL 		|| null,
+		unicast			: options.unicast		|| null,
+		key				: options.key				|| null,
+		mastersRequired	: options.mastersRequired	|| 1,
+		weight			: options.weight			|| Discover.weight(),
+		client			: options.client			|| (!options.client &#x26;&#x26; !options.server),
+		server			: options.server			|| (!options.client &#x26;&#x26; !options.server),
+		reuseAddr		: options.reuseAddr, 		//default is set at the network layer (true)
+		ignoreProcess : (options.ignoreProcess ===  false) ? false : true,
+		ignoreInstance : (options.ignoreInstance ===  false) ? false : true
+	};
+
+	//this is for backwards compatibilty with v0.1.0
+	//TODO: should be removed in the next major release
+	if (options.ignore === false) {
+		settings.ignoreProcess = false;
+		settings.ignoreInstance = false;
+	}
+
+	if (!(settings.nodeTimeout &#x3e;= settings.checkInterval)) {
+		throw new Error(&#x22;nodeTimeout must be greater than or equal to checkInterval.&#x22;);
+	}
+
+	if (!(settings.masterTimeout &#x3e;= settings.nodeTimeout)) {
+		throw new Error(&#x22;masterTimeout must be greater than or equal to nodeTimeout.&#x22;);
+	}
+
+	self.broadcast = new Network({
+		address 	: settings.address,
+		port 		: settings.port,
+		broadcast 	: settings.broadcast,
+		multicast	: settings.multicast,
+		multicastTTL: settings.multicastTTL,
+		unicast		: settings.unicast,
+		key 		: settings.key,
+		reuseAddr	: settings.reuseAddr,
+		ignoreProcess  : settings.ignoreProcess,
+		ignoreInstance  : settings.ignoreInstance
+	});
+
+	//This is the object that gets broadcast with each hello packet.
+	self.me = {
+		isMaster 	: false,
+		isMasterEligible: self.settings.server, //Only master eligible by default if we are a server
+		weight 		: settings.weight,
+		address 	: &#x27;127.0.0.1&#x27;, //TODO: get the real local address?
+		advertisement	: options.advertisement
+	};
+
+	self.nodes = {};
+	self.channels = [];
+
+	<span class="apidocCodeCommentSpan">/*
+	 * When receiving hello messages we need things to happen in the following order:
+	 * 	- make sure the node is in the node list
+	 * 	- if hello is from new node, emit added
+	 * 	- if hello is from new master and we are master, demote
+	 * 	- if hello is from new master emit master
+	 *
+	 * need to be careful not to over-write the old node object before we have information
+	 * about the old instance to determine if node was previously a master.
+	 */
+</span>	self.evaluateHello = function (data, obj, rinfo) {
+		//prevent processing hello message from self
+		if (obj.iid === self.broadcast.instanceUuid) {
+			return;
+		}
+
+		data.lastSeen = +new Date();
+		data.address = rinfo.address;
+		data.hostName = obj.hostName;
+		data.port = rinfo.port;
+		data.id = obj.iid;
+		var isNew = !self.nodes[obj.iid];
+		var wasMaster = null;
+
+		if (!isNew) {
+			wasMaster = !!self.nodes[obj.iid].isMaster;
+		}
+
+		var node = self.nodes[obj.iid] = self.nodes[obj.iid] || {};
+
+		Object.getOwnPropertyNames(data).forEach(function (key) {
+			node[key] = data[key];
+		});
+
+		if (isNew) {
+			//new node found
+
+			self.emit(&#x22;added&#x22;, node, obj, rinfo);
+		}
+
+		self.emit(&#x22;helloReceived&#x22;, node);
+
+		if (node.isMaster) {
+			//if we have this node and it was not previously a master then it is a new master node
+			if ((isNew || !wasMaster )) {
+				//this is a new master
+
+				//count up how many masters we have now
+				//initialze to 1 if we are a master
+				var masterCount = (self.me.isMaster) ? 1 : 0;
+				for (var uuid in self.nodes) {
+					if (self.nodes[uuid].isMaster) ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-discover.network" id="apidoc.element.node-discover.network">
+        function <span class="apidocSignatureSpan">node-discover.</span>network
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Network(options) {
+    if (!(this instanceof Network)) {
+        return new Network(options, callback);
+    }
+
+    EventEmitter.call(this);
+
+    var self = this, options = options || {};
+
+    self.address        = options.address   || &#x27;0.0.0.0&#x27;;
+    self.port           = options.port      || 12345;
+    self.broadcast      = options.broadcast || null;
+    self.multicast      = options.multicast || null;
+    self.multicastTTL   = options.multicastTTL || 1;
+    self.unicast        = options.unicast   || null;
+    self.key            = options.key       || null;
+    self.reuseAddr      = (options.reuseAddr === false) ? false : true;
+    self.ignoreProcess  = (options.ignoreProcess ===  false) ? false : true;
+    self.ignoreInstance = (options.ignoreInstance ===  false) ? false : true;
+
+    if (nodeVersion[0] === 0 &#x26;&#x26; nodeVersion[1] &#x3c; 12) {
+        //node v0.10 does not support passing an object to dgram.createSocket
+        //not sure if v0.11 does, but assuming it does not.
+        self.socket = dgram.createSocket(&#x27;udp4&#x27;);
+    }
+    else {
+        self.socket = dgram.createSocket({type: &#x27;udp4&#x27;, reuseAddr: self.reuseAddr });
+    }
+
+    self.instanceUuid = uuid.v4();
+    self.processUuid = procUuid;
+
+    self.socket.on(&#x22;message&#x22;, function ( data, rinfo ) {
+        self.decode(data, function (err, obj) {
+            if (err) {
+                //most decode errors are because we tried
+                //to decrypt a packet for which we do not
+                //have the key
+
+                //the only other possibility is that the
+                //message was split across packet boundaries
+                //and that is not handled
+
+                //self.emit(&#x22;error&#x22;, err);
+            }
+            else if (obj.pid == procUuid &#x26;&#x26; self.ignoreProcess &#x26;&#x26; obj.iid !== self.instanceUuid) {
+                    return false;
+            }
+            else if (obj.iid == self.instanceUuid &#x26;&#x26; self.ignoreInstance) {
+                    return false;
+            }
+            else if (obj.event &#x26;&#x26; obj.data) {
+                self.emit(obj.event, obj.data, obj, rinfo);
+            }
+            else {
+                self.emit(&#x22;message&#x22;, obj)
+            }
+        });
+    });
+
+    self.on(&#x22;error&#x22;, function (err) {
+        //TODO: Deal with this
+<span class="apidocCodeCommentSpan">        /*console.log(&#x22;Network error: &#x22;, err.stack);*/
+</span>    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-discover.super_" id="apidoc.element.node-discover.super_">
+        function <span class="apidocSignatureSpan">node-discover.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventEmitter() {
+  EventEmitter.init.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-discover.weight" id="apidoc.element.node-discover.weight">
+        function <span class="apidocSignatureSpan">node-discover.</span>weight
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">weight = function () {
+	//default to negative, decimal now value
+	return -(Date.now() / Math.pow(10,String(Date.now()).length));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		* Default: 1
+	* **unicast** : Comma separated String or Array of Unicast addresses of known nodes
+		* It is advised to specify the `address` of the local interface when using unicast and expecting local discovery to work
+	* **key** : Encryption key if your broadcast packets should be encrypted
+		* Default: null (that means no encryption)
+	* **mastersRequired**	: The count of master processes that should always be available
+	* **weight** : A number used to determine the preference for a specific process to become master
+		* Default : Discover.<span class="apidocCodeKeywordSpan">weight</span>()
+		* Higher numbers win.
+	* **client** : When true operate in client only mode (don&#x27;t broadcast existence of node, just listen and discover)
+		* Default : false
+	* **reuseAddr**	: Allow multiple processes on the same host to bind to the same address and port.
+		* Default: true
+		* Only applies to node v0.12+
+	* **ignoreProcess** : If set to false, will not ignore messages from other Discover instances within the same process (on non-reserved
+ channels), join() will receive them.
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-discover.network" id="apidoc.module.node-discover.network">module node-discover.network</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-discover.network.network" id="apidoc.element.node-discover.network.network">
+        function <span class="apidocSignatureSpan">node-discover.</span>network
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Network(options) {
+    if (!(this instanceof Network)) {
+        return new Network(options, callback);
+    }
+
+    EventEmitter.call(this);
+
+    var self = this, options = options || {};
+
+    self.address        = options.address   || &#x27;0.0.0.0&#x27;;
+    self.port           = options.port      || 12345;
+    self.broadcast      = options.broadcast || null;
+    self.multicast      = options.multicast || null;
+    self.multicastTTL   = options.multicastTTL || 1;
+    self.unicast        = options.unicast   || null;
+    self.key            = options.key       || null;
+    self.reuseAddr      = (options.reuseAddr === false) ? false : true;
+    self.ignoreProcess  = (options.ignoreProcess ===  false) ? false : true;
+    self.ignoreInstance = (options.ignoreInstance ===  false) ? false : true;
+
+    if (nodeVersion[0] === 0 &#x26;&#x26; nodeVersion[1] &#x3c; 12) {
+        //node v0.10 does not support passing an object to dgram.createSocket
+        //not sure if v0.11 does, but assuming it does not.
+        self.socket = dgram.createSocket(&#x27;udp4&#x27;);
+    }
+    else {
+        self.socket = dgram.createSocket({type: &#x27;udp4&#x27;, reuseAddr: self.reuseAddr });
+    }
+
+    self.instanceUuid = uuid.v4();
+    self.processUuid = procUuid;
+
+    self.socket.on(&#x22;message&#x22;, function ( data, rinfo ) {
+        self.decode(data, function (err, obj) {
+            if (err) {
+                //most decode errors are because we tried
+                //to decrypt a packet for which we do not
+                //have the key
+
+                //the only other possibility is that the
+                //message was split across packet boundaries
+                //and that is not handled
+
+                //self.emit(&#x22;error&#x22;, err);
+            }
+            else if (obj.pid == procUuid &#x26;&#x26; self.ignoreProcess &#x26;&#x26; obj.iid !== self.instanceUuid) {
+                    return false;
+            }
+            else if (obj.iid == self.instanceUuid &#x26;&#x26; self.ignoreInstance) {
+                    return false;
+            }
+            else if (obj.event &#x26;&#x26; obj.data) {
+                self.emit(obj.event, obj.data, obj, rinfo);
+            }
+            else {
+                self.emit(&#x22;message&#x22;, obj)
+            }
+        });
+    });
+
+    self.on(&#x22;error&#x22;, function (err) {
+        //TODO: Deal with this
+<span class="apidocCodeCommentSpan">        /*console.log(&#x22;Network error: &#x22;, err.stack);*/
+</span>    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-discover.network.super_" id="apidoc.element.node-discover.network.super_">
+        function <span class="apidocSignatureSpan">node-discover.network.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventEmitter() {
+  EventEmitter.init.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-discover.network.prototype" id="apidoc.module.node-discover.network.prototype">module node-discover.network.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-discover.network.prototype.decode" id="apidoc.element.node-discover.network.prototype.decode">
+        function <span class="apidocSignatureSpan">node-discover.network.prototype.</span>decode
+        <span class="apidocSignatureSpan">(data, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">decode = function (data, callback) {
+    var self = this
+        , tmp
+        ;
+
+    try {
+        if (self.key) {
+        tmp = JSON.parse(decrypt(data.toString(),self.key));
+        }
+        else {
+            tmp = JSON.parse(data);
+        }
+    }
+    catch (e) {
+        return callback(e, null);
+    }
+
+    return callback(null, tmp);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        self.socket = dgram.createSocket({type: &#x27;udp4&#x27;, reuseAddr: self.reuseAddr });
+    }
+
+    self.instanceUuid = uuid.v4();
+    self.processUuid = procUuid;
+
+    self.socket.on(&#x22;message&#x22;, function ( data, rinfo ) {
+        self.<span class="apidocCodeKeywordSpan">decode</span>(data, function (err, obj) {
+            if (err) {
+//most decode errors are because we tried
+//to decrypt a packet for which we do not
+//have the key
+
+//the only other possibility is that the
+//message was split across packet boundaries
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-discover.network.prototype.encode" id="apidoc.element.node-discover.network.prototype.encode">
+        function <span class="apidocSignatureSpan">node-discover.network.prototype.</span>encode
+        <span class="apidocSignatureSpan">(data, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">encode = function (data, callback) {
+    var self = this
+        , tmp
+        ;
+
+    try {
+        tmp = (self.key)
+            ? encrypt(JSON.stringify(data),self.key)
+            : JSON.stringify(data)
+            ;
+    }
+    catch (e) {
+        return callback(e, null);
+    }
+
+    return callback(null, tmp);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+obj.data = arguments[1];
+    }
+    else {
+//TODO: splice the arguments array and remove the first element
+//setting data to the result array
+    }
+
+    self.<span class="apidocCodeKeywordSpan">encode</span>(obj, function (err, contents) {
+if (err) {
+    return false;
+}
+
+var msg = new Buffer(contents);
+
+self.destination.forEach(function (destination) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-discover.network.prototype.send" id="apidoc.element.node-discover.network.prototype.send">
+        function <span class="apidocSignatureSpan">node-discover.network.prototype.</span>send
+        <span class="apidocSignatureSpan">(event)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">send = function (event) {
+    var self = this;
+
+    var obj = {
+        event : event,
+        pid : procUuid,
+        iid : self.instanceUuid,
+        hostName : hostName
+    };
+
+    if (arguments.length == 2) {
+        obj.data = arguments[1];
+    }
+    else {
+        //TODO: splice the arguments array and remove the first element
+        //setting data to the result array
+    }
+
+    self.encode(obj, function (err, contents) {
+        if (err) {
+            return false;
+        }
+
+        var msg = new Buffer(contents);
+
+        self.destination.forEach(function (destination) {
+            self.socket.send(
+                msg
+                , 0
+                , msg.length
+                , self.port
+                , destination
+            );
+        });
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### send(channel, objectToSend)
+Send a message/object on a specific channel
+
+```js
+var Discover = require(&#x27;node-discover&#x27;);
+var d = Discover();
+
+var success = d.<span class="apidocCodeKeywordSpan">send</span>(&#x22;config-updates&#x22;, { redisMaster : &#x22;10.0.1.4&#x22; });
+
+if (!succes) {
+	//could not send on that channel; probably because it is reserved
+}
+```
+
+### advertise(objectToAdvertise)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-discover.network.prototype.start" id="apidoc.element.node-discover.network.prototype.start">
+        function <span class="apidocSignatureSpan">node-discover.network.prototype.</span>start
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">start = function (callback) {
+    var self = this;
+
+    self.socket.bind(self.port, self.address, function () {
+        if (self.unicast) {
+            if (typeof self.unicast === &#x27;string&#x27; &#x26;&#x26; ~self.unicast.indexOf(&#x27;,&#x27;)) {
+                self.unicast = self.unicast.split(&#x27;,&#x27;);
+            }
+
+            self.destination = [].concat(self.unicast);
+        }
+        else if (!self.multicast) {
+            //Default to using broadcast if multicast address is not specified.
+            self.socket.setBroadcast(true);
+
+            //TODO: get the default broadcast address from os.networkInterfaces() (not currently returned)
+            self.destination = [self.broadcast || &#x22;255.255.255.255&#x22;];
+        }
+        else {
+            try {
+                //addMembership can throw if there are no interfaces available
+                self.socket.addMembership(self.multicast);
+                self.socket.setMulticastTTL(self.multicastTTL);
+            }
+            catch (e) {
+                self.emit(&#x27;error&#x27;, e);
+
+                return callback &#x26;&#x26; callback(e);
+            }
+
+            self.destination = [self.multicast];
+        }
+
+        return callback &#x26;&#x26; callback();
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### start()
+Start broadcasting hello packets and checking for missing nodes (start is called automatically in the constructor)
+
+```js
+var Discover = require(&#x27;node-discover&#x27;);
+var d = Discover();
+
+d.<span class="apidocCodeKeywordSpan">start</span>();
+```
+
+### stop()
+Stop broadcasting hello packets and checking for missing nodes
+
+```js
+var Discover = require(&#x27;node-discover&#x27;);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-discover.network.prototype.stop" id="apidoc.element.node-discover.network.prototype.stop">
+        function <span class="apidocSignatureSpan">node-discover.network.prototype.</span>stop
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stop = function (callback) {
+    var self = this;
+
+    self.socket.close();
+
+    return callback &#x26;&#x26; callback();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### stop()
+Stop broadcasting hello packets and checking for missing nodes
+
+```js
+var Discover = require(&#x27;node-discover&#x27;);
+var d = Discover();
+
+d.<span class="apidocCodeKeywordSpan">stop</span>();
+```
+
+### eachNode(fn)
+For each node execute fn, passing fn the node fn(node)
+
+```js
+var Discover = require(&#x27;node-discover&#x27;);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
